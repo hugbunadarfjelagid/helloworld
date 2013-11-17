@@ -14,10 +14,9 @@ Some helpful links:
 
 ### Selenium tests
 
-This repo currently has two separate Selenium test classes;
+1. FirefoxTestTitleIT - that runs a Selenium native WebDriver that controls Firefox
+2. ~~ChromeTestTitleIT - that sets up and runs using Google Chrome (via [chromedriver](http://code.google.com/p/selenium/wiki/ChromeDriver))~~
 
-1. ChromeTestTitleIT - that sets up and runs using Google Chrome (via [chromedriver](http://code.google.com/p/selenium/wiki/ChromeDriver))
-2. FirefoxTestTitleIT - that runs a Selenium native WebDriver that controls Firefox
 
 #### Run the tests on the Greenqloud server
 
@@ -27,7 +26,7 @@ To setup the requirements on the Greenqloud server, we've embedded a script in t
 
     bin/greenqloud_xvfb_setup
 
-This script installs Chrome and Firefox browsers, Xvfb and dependencies. It also fetches and prepares the chromedriver for us.
+This script installs Firefox browser, Xvfb and dependencies.
 
 Now you have everything setup, simply run:
 
@@ -36,17 +35,7 @@ Now you have everything setup, simply run:
 
 #### For running locally
 
-For each of these tests, you'll need to make sure you have the corresponding browser installed and accessible in your path. Depending on which OS you are running, this setup is different. 
-
-You'll also need to have the chromedriver (see above) installed. To install chromedriver:
-
-* On Windows:
-    * [Download the zip file](http://chromedriver.storage.googleapis.com/index.html)
-    * Unzip it, and place the `chromedriver.exe` file into the root of the repo (e.g. `C:\dev\public\helloworld\chromedriver.exe`)
-    * In the command prompt, rename the executable: `mv chromedriver.exe chromedriver`
-* On *nix:
-    * [Download the zip file](http://chromedriver.storage.googleapis.com/index.html)
-    * Unzip it to the root of the repo.
+Firefox is required, we reccomend version 24.
 
 When running locally we won't need Xvfb (in most cases), while developing, and we also like to be able to start and stop the server ourselves. So first:
 
