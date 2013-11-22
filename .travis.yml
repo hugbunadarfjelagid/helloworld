@@ -8,3 +8,6 @@ deploy:
   app: ancient-bastion-1890
   on:
     repo: hugbunadarfjelagid/helloworld
+    
+export STAGING_SERVER=http://ancient-bastion-1890.herokuapp.com/
+sh bin/selenium_test_xvfb
