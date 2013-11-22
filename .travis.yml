@@ -1,3 +1,10 @@
 language: java
 jdk:
 - openjdk7
+deploy:
+  provider: heroku
+  api_key:
+    secure: Av11WrNL8Kf7i1NCd2jY0sKzpx5rV0EFZY5/0BhcYJ0qvr4dHleyBzb7n3uf3nivtah4GI+iPyBulLOeH80vmg5KdA/u7HGCuNDcT9EgAAQtfOLwmZwDoAi681RX4sfHQ/ipsdWDWZPKjGfYM6GVCrQO+JKlv19kld+ipgdRv2Q=
+  app: ancient-bastion-1890
+  on:
+    repo: hugbunadarfjelagid/helloworld
